@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/assets/style.css">
+    </head>
+    <body>
+        <form method="POST" action="/search">
+            <input type="text" name="search" id="searchUser" placeholder="Search" pattern=".{1,}" required>
+            <input type="submit" value="submit">
+        </form>
+        <h1>search results for <%=name%></h1>
+        <div class="searchResultList">
+        <% if(results) {
+            results.forEach(function(result) { %>
+                <a data-method="get" href=<%=result.username%>><%=result.name%></a>
+            <%})
+        } else {%>
+            <p>Not found</p>
+        <%}%>
+        </div>
+        <a data-method="get" href="/profile">Back to Profile</a>
+    </body>
+</html>

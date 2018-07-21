@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>testing app</title>
+    </head>
+    <body>
+        <h1>Map your adventure</h1>
+        <h2>Register</h2>
+        <form method="post" action="/">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="username" placeholder="Username" pattern="[^\s]+" required title="No spaces allowed">
+            <input type="text" name="password" placeholder="Password" pattern=".{6,}" required title="Must be 6 characters or more">
+            <input type="submit" value="Create my account">
+        </form>
+        <h2>Login</h2>
+        <form method="post" action="/">
+            <input type="text" name="logusername" placeholder="Username" required>
+            <input type="text" name="logpassword" placeholder="Password" required>
+            <input type="submit" value="Log in">
+        </form>
+    </body>
+</html>

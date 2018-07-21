@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>RapidFlow</title>
+        <link rel="stylesheet" href="/assets/style.css"/>
+    </head>
+    <body>
+        <form method="POST" action="/search">
+            <input type="text" name="search" id="searchUser" placeholder="Search" pattern=".{1,}" required>
+            <input type="submit" value="submit">
+        </form>
+        <h1>Hello, <%=name%></h1>
+        <button class="pop(addCountryWindow)">Add Country</button>
+        <div class="addCountryWindow">
+            <div clas="addCountry">
+                <span class="close">&times;</span>
+                <form class="addCountryForm" method="POST" action="/add">
+                    <input type="text" name="country" placeholder="Country Name" required>
+                    <input type="text" name="color" placeholder="Color" required>
+                    <input type="text" name="description" placeholder="Description">
+                    <input type="submit" value="submit">
+                </form>
+            </div>
+        </div>
+        <div class="wall">
+            <% if(countries) {
+                countries.forEach(function(country) { %>
+                <div class=<%=country._id%>>
+                    <h2><%=country.country%></h2>
+                    <p><%=country.description%></p>
+                    <a class="get" data-method="delete" data-token="{{csrf_token()}}" href=<%='/delete/' + country._id %> >&times;</a>
+                </div>
+            <% })} %>
+        </div>
+        <div id="chart"></div>
+        <div class="back" onclick="back()">Retreat</div>
+        <form method="GET" action="/profile/logout">
+            <button>Log Out</button>
+        </form>    
+
+        <!-- <script src="/assets/index.js"></script> -->
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script src="/assets/map.js"></script>
+        <script src="https://unpkg.com/topojson-client@3"></script>
+    </body>
+</html>

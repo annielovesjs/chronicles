@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>RapidFlow</title>
+        <link rel="stylesheet" href="/assets/style.css"/>
+    </head>
+    <body>
+        <form method="POST" action="/search">
+            <input type="text" name="search" id="searchUser" placeholder="Search" pattern=".{1,}" required>
+            <input type="submit" value="submit">
+        </form>
+        <h1>Travel with <%=name%></h1>
+        <a data-method="get" href="/profile">Back to Profile</a>
+        <div id="chart"></div>
+        <div class="back" onclick="back()">Retreat</div>
+        <form method="GET" action="/profile/logout">
+            <button>Log Out</button>
+        </form>    
+        <script src="/assets/index.js"></script>
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script src="/assets/publicMap.js"></script>
+        <script src="https://unpkg.com/topojson-client@3"></script>
+    </body>
+</html>

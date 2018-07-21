@@ -1,0 +1,45 @@
+#chart{
+    width: 100%;
+    background: rgb(252, 254, 255);
+    position: relative;
+    overflow: visible;
+}
+
+#chart svg {
+    max-width: 100%;
+    overflow: visible;       
+}
+
+.back {
+  display: none;
+}
+
+div.tooltip {
+  position: absolute;     
+  text-align: center;     
+  padding: 10px;
+  font: 12px sans-serif;    
+  background: #fff; 
+  border: none;       
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;  
+  max-width: 265px;
+  /* min-width: 195px;
+  min-height: 340px; */
+  box-shadow: 5px 5px 18px #888888;
+}
+
+div.infoBox {
+  position: absolute;     
+  text-align: center;     
+  padding: 10px;
+  font: 12px sans-serif;    
+  background: #fff; 
+  border: none;       
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;  
+  max-width: 265px;
+  /* min-width: 195px;
+  min-height: 340px; */
+  box-shadow: 5px 5px 18px #888888;
+}
