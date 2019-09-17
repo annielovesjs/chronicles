@@ -9,7 +9,7 @@ var Country = require(__dirname + '/models/userModel.js').Country;
 
 var port = process.env.PORT || 3000;
 
-var mongoDB = 'mongodb://annie:liang1126@ds231229.mlab.com:31229/userdata';
+var mongoDB = ####;
 mongoose.connect(mongoDB, { useNewUrlParser: true });
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
